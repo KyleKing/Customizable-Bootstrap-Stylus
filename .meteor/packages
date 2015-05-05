@@ -7,3 +7,6 @@
 meteor-platform
 autopublish
 insecure
+less
+kyleking:bootstrap-stylus
+fortawesome:fontawesome
