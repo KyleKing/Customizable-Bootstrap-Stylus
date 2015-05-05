@@ -1,5 +1,7 @@
-HTML test from Bootstrap TLDR:
+Forked package inside its own Meteor project. Currently figuring out how to make a package for customized stylus file imports, which May be way harder than it sounds!
 
+HTML test from Bootstrap TLDR:
+```html
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -23,3 +25,4 @@ HTML test from Bootstrap TLDR:
     <!-- endbuild -->
   </head>
 </html>
+```
