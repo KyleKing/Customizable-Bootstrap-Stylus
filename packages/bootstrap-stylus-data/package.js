@@ -12,6 +12,7 @@ Package.onUse(function(api) {
   api.add_files([
     'bootstrap/bootstrap-stylus/bootstrap/alerts.styl',
     'bootstrap/bootstrap-stylus/bootstrap/badges.styl',
+    'bootstrap/bootstrap-stylus/bootstrap/index.styl',
     'bootstrap/bootstrap-stylus/bootstrap/breadcrumbs.styl',
     'bootstrap/bootstrap-stylus/bootstrap/button-groups.styl',
     'bootstrap/bootstrap-stylus/bootstrap/buttons.styl',
@@ -100,6 +101,3 @@ Package.onUse(function(api) {
     'bootstrap/bootstrap-stylus/fonts/glyphicons-halflings-regular.woff2',
   ], 'client');
 });
-
-
-// 'bootstrap/bootstrap-stylus/bootstrap/bootstrap.styl',

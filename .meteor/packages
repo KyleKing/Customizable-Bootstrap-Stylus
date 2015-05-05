@@ -8,10 +8,10 @@ meteor-platform
 autopublish
 insecure
 # Add check for proper less compiler?
-less
-kyleking:bootstrap-less
-# stylus
-# kyleking:bootstrap-stylus
+# less
+# kyleking:bootstrap-less
+stylus
+kyleking:bootstrap-stylus
 # Integrate common font choices as well?
 # chriswessels:glyphicons-halflings
 # fortawesome:fontawesome

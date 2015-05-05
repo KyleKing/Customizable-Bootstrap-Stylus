@@ -5,7 +5,7 @@ Package.describe({
   // version: "3.3.4_2",
   // git: "https://github.com/Nemo64/meteor-bootstrap"
 
-  var DataPackage = 'kyleking:bootstrap-stylus-data';
+var DataPackage = 'kyleking:bootstrap-stylus-data';
 
 
 Package._transitional_registerBuildPlugin({

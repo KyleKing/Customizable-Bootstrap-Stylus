@@ -1,7 +1,13 @@
+// Node filesystem
+// https://nodejs.org/api/fs.html
 var fs   = Npm.require('fs');
+// Path Path Package
+// https://nodejs.org/api/path.html
 var path = Npm.require('path');
 
+// Create file and header section of new less files
 var createLessFile = function (path, content) {
+  // console.log(content);
   fs.writeFileSync(path, content.join('\n'), { encoding: 'utf8' });
 };
 
@@ -9,10 +15,12 @@ var getAsset = function (filename) {
   return BootstrapData(filename);
 };
 
+// Actually content for each file
 var getLessContent = function (filename) {
   var content = getAsset(filename);
-  return '\n\n// @import "' + filename + '"\n'
-    + content.replace(/@import\s*["']([^"]+)["'];?/g, function (statement, importFile) {
+  return '\n\n// @import "' + filename + '"\n' + content.replace(/@import\s*["']([^"]+)["'];?/g, function (statement, importFile) {
+    console.log('\n\n***** importFile *****\n');
+    console.log(importFile);
     return getLessContent(path.join(path.dirname(filename), importFile));
   });
 };
@@ -32,6 +40,8 @@ var handler = function (compileStep, isLiterate) {
   // parse configuration
   try {
     userConfiguration = JSON.parse(userConfiguration);
+    console.log('/n userConfiguration:');
+    console.log(userConfiguration);
   } catch (e) {
     compileStep.error({
       message: e.message,
@@ -51,7 +61,7 @@ var handler = function (compileStep, isLiterate) {
   var allModulesOk = _.every(moduleConfiguration, function (enabled, module) {
 
     var moduleDefinition = moduleDefinitions[module];
-    if (moduleDefinition == null) {
+    if (moduleDefinition === null) {
       compileStep.error({
         message: "The module '" + module + "' does not exist.",
         sourcePath: compileStep.inputPath
@@ -88,11 +98,12 @@ var handler = function (compileStep, isLiterate) {
     });
   }
 
-  // filenames
-  var mixinsLessFile = jsonPath.replace(/json$/i, 'mixins.import.less')
+  // Output complete file paths
+  var mixinsLessFile = jsonPath.replace(/json$/i, 'mixins.import.less');
   var importLessFile = jsonPath.replace(/json$/i, 'import.less');
   var outputLessFile = jsonPath.replace(/json$/i, 'less');
 
+// Create file with header descriptor section
   createLessFile(mixinsLessFile, [
     "// THIS FILE IS GENERATED, DO NOT MODIFY IT!",
     "// These are the mixins bootstrap provides",
@@ -124,7 +135,7 @@ var handler = function (compileStep, isLiterate) {
     "// To fix that remove that file and then recover your changes.",
     '',
     '@import "' + path.basename(importLessFile) + '";',
-    '@icon-font-path: "/packages/nemo64_bootstrap-data/bootstrap/fonts/";'
+    '@icon-font-path: "/packages/kyleking_bootstrap-stylus-data/bootstrap/fonts/";'
   ];
   _.each(less, function (lessPath) {
     bootstrapContent.push(getLessContent('' + lessPath));

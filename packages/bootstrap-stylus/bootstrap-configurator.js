@@ -1,19 +1,26 @@
+// Node filesystem
+// https://nodejs.org/api/fs.html
 var fs   = Npm.require('fs');
+// Path Path Package
+// https://nodejs.org/api/path.html
 var path = Npm.require('path');
 
-var createLessFile = function (path, content) {
+// Create file and header section of new stylus files
+var createStylusFile = function (path, content) {
   fs.writeFileSync(path, content.join('\n'), { encoding: 'utf8' });
 };
 
 var getAsset = function (filename) {
+  // console.log(filename);
   return BootstrapData(filename);
 };
 
-var getLessContent = function (filename) {
+// Actually content for each file
+var getStylusContent = function (filename) {
   var content = getAsset(filename);
-  return '\n\n// @import "' + filename + '"\n'
-    + content.replace(/@import\s*["']([^"]+)["'];?/g, function (statement, importFile) {
-    return getLessContent(path.join(path.dirname(filename), importFile));
+  return '\n\n// @import "' + filename + '"\n' + content.replace(/@import\s*["']([^"]+)["'];?/g, function (statement, importFile) {
+    return getStylusContent(path.join(path.dirname(filename), importFile + '.styl'));
+    // note: '.styl is to complete filename as Stylus doesn't in import text
   });
 };
 
@@ -51,7 +58,7 @@ var handler = function (compileStep, isLiterate) {
   var allModulesOk = _.every(moduleConfiguration, function (enabled, module) {
 
     var moduleDefinition = moduleDefinitions[module];
-    if (moduleDefinition == null) {
+    if (moduleDefinition === null) {
       compileStep.error({
         message: "The module '" + module + "' does not exist.",
         sourcePath: compileStep.inputPath
@@ -88,33 +95,35 @@ var handler = function (compileStep, isLiterate) {
     });
   }
 
-  // filenames
-  var mixinsLessFile = jsonPath.replace(/json$/i, 'mixins.import.styl');
-  var importLessFile = jsonPath.replace(/json$/i, 'import.styl');
-  var outputLessFile = jsonPath.replace(/json$/i, 'stylus');
+  // Outputs complete file paths
+  var mixinsStylusFile = jsonPath.replace(/json$/i, 'mixins.import.styl');
+  var importStylusFile = jsonPath.replace(/json$/i, 'import.styl');
+  var outputStylusFile = jsonPath.replace(/json$/i, 'stylus');
 
-  createLessFile(mixinsLessFile, [
+  // Create file with header descriptor section
+  // Create mixins file
+  createStylusFile(mixinsStylusFile, [
     "// THIS FILE IS GENERATED, DO NOT MODIFY IT!",
     "// These are the mixins bootstrap provides",
     "// They are included here so you can use them in your stylus files too,",
-    "// However: you should @import \"" + path.basename(importLessFile) + "\" instead of this",
-    getLessContent('bootstrap/bootstrap-stylus/bootstrap/mixins.styl')
+    "// However: you should @import \"" + path.basename(importStylusFile) + "\" instead of this",
+    getStylusContent('bootstrap/bootstrap-stylus/bootstrap/mixins.styl')
   ]);
 
-  // create the file that can be modified
-  if (! fs.existsSync(importLessFile)) {
-    createLessFile(importLessFile, [
+  // create the file that can be modified (variables)
+  if (! fs.existsSync(importStylusFile)) {
+    createStylusFile(importStylusFile, [
       "// This File is for you to modify!",
       "// It won't be overwritten as long as it exists.",
       "// You may include this file into your stylus files to benefit from",
       "// mixins and variables that bootstrap provides.",
       '',
-      '@import "' + path.basename(mixinsLessFile) + '";',
-      getLessContent('bootstrap/bootstrap-stylus/bootstrap/variables.styl')
+      '@import "' + path.basename(mixinsStylusFile) + '";',
+      getStylusContent('bootstrap/bootstrap-stylus/bootstrap/variables.styl')
     ]);
   }
 
-  // create the file that finally includes bootstrap
+  // create the file that finally includes bootstrap (components)
   var bootstrapContent = [
     "// THIS FILE IS GENERATED, DO NOT MODIFY IT!",
     "// It includes the bootstrap modules configured in " + compileStep.inputPath + ".",
@@ -123,13 +132,15 @@ var handler = function (compileStep, isLiterate) {
     "// If it throws errors your bootstrap.import.styl is probably invalid.",
     "// To fix that remove that file and then recover your changes.",
     '',
-    '@import "' + path.basename(importLessFile) + '";',
-    '@icon-font-path: "/packages/nemo64_bootstrap-data/bootstrap/fonts/";'
+    '@import "' + path.basename(importStylusFile) + '";',
+    '@icon-font-path: "/packages/kyleking_bootstrap-stylus-data/bootstrap/bootstrap-stylus/fonts/";'
   ];
+
+  // Find each component and push to file
   _.each(stylus, function (stylusPath) {
-    bootstrapContent.push(getLessContent('' + stylusPath));
+    bootstrapContent.push(getStylusContent('' + stylusPath));
   });
-  createLessFile(outputLessFile, bootstrapContent);
+  createStylusFile(outputStylusFile, bootstrapContent);
 };
 
 Plugin.registerSourceHandler('bootstrap.json', {archMatching: 'web'}, handler);
