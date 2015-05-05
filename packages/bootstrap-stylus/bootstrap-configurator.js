@@ -45,9 +45,9 @@ var handler = function (compileStep, isLiterate) {
 
   // these variables contain the files that need to be included
   var js = {}; // set of required js files
-  var less = {}; // set of required less files
+  var stylus = {}; // set of required stylus files
 
-  // read module configuration to find out which js/less files are needed
+  // read module configuration to find out which js/stylus files are needed
   var allModulesOk = _.every(moduleConfiguration, function (enabled, module) {
 
     var moduleDefinition = moduleDefinitions[module];
@@ -63,8 +63,8 @@ var handler = function (compileStep, isLiterate) {
       return true; // continue
     }
 
-    _.each(moduleDefinition.less || [], function (file) {
-      less[file] = file;
+    _.each(moduleDefinition.styl || [], function (file) {
+      stylus[file] = file;
     });
     _.each(moduleDefinition.js || [], function (file) {
       js[file] = file;
@@ -89,16 +89,16 @@ var handler = function (compileStep, isLiterate) {
   }
 
   // filenames
-  var mixinsLessFile = jsonPath.replace(/json$/i, 'mixins.import.less')
-  var importLessFile = jsonPath.replace(/json$/i, 'import.less');
-  var outputLessFile = jsonPath.replace(/json$/i, 'less');
+  var mixinsLessFile = jsonPath.replace(/json$/i, 'mixins.import.styl');
+  var importLessFile = jsonPath.replace(/json$/i, 'import.styl');
+  var outputLessFile = jsonPath.replace(/json$/i, 'stylus');
 
   createLessFile(mixinsLessFile, [
     "// THIS FILE IS GENERATED, DO NOT MODIFY IT!",
     "// These are the mixins bootstrap provides",
-    "// They are included here so you can use them in your less files too,",
+    "// They are included here so you can use them in your stylus files too,",
     "// However: you should @import \"" + path.basename(importLessFile) + "\" instead of this",
-    getLessContent('bootstrap/less/mixins.less')
+    getLessContent('bootstrap/bootstrap-stylus/bootstrap/mixins.styl')
   ]);
 
   // create the file that can be modified
@@ -106,11 +106,11 @@ var handler = function (compileStep, isLiterate) {
     createLessFile(importLessFile, [
       "// This File is for you to modify!",
       "// It won't be overwritten as long as it exists.",
-      "// You may include this file into your less files to benefit from",
+      "// You may include this file into your stylus files to benefit from",
       "// mixins and variables that bootstrap provides.",
       '',
       '@import "' + path.basename(mixinsLessFile) + '";',
-      getLessContent('bootstrap/less/variables.less')
+      getLessContent('bootstrap/bootstrap-stylus/bootstrap/variables.styl')
     ]);
   }
 
@@ -118,16 +118,16 @@ var handler = function (compileStep, isLiterate) {
   var bootstrapContent = [
     "// THIS FILE IS GENERATED, DO NOT MODIFY IT!",
     "// It includes the bootstrap modules configured in " + compileStep.inputPath + ".",
-    "// You may need to use 'meteor add less' if the styles are not loaded.",
+    "// You may need to use 'meteor add stylus' if the styles are not loaded.",
     '',
-    "// If it throws errors your bootstrap.import.less is probably invalid.",
+    "// If it throws errors your bootstrap.import.styl is probably invalid.",
     "// To fix that remove that file and then recover your changes.",
     '',
     '@import "' + path.basename(importLessFile) + '";',
     '@icon-font-path: "/packages/nemo64_bootstrap-data/bootstrap/fonts/";'
   ];
-  _.each(less, function (lessPath) {
-    bootstrapContent.push(getLessContent('' + lessPath));
+  _.each(stylus, function (stylusPath) {
+    bootstrapContent.push(getLessContent('' + stylusPath));
   });
   createLessFile(outputLessFile, bootstrapContent);
 };

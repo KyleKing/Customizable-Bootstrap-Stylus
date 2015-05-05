@@ -1,75 +1,75 @@
 moduleDefinitions = {
-  "variables":{less:["bootstrap/less/variables.less"]},
-  "mixins":{less:["bootstrap/less/mixins.less"]},
+  "variables":{stylus:["bootstrap/bootstrap-stylus/bootstrap/variables.styl"]},
+  "mixins":{stylus:["bootstrap/bootstrap-stylus/bootstrap/mixins.styl"]},
 
-  "normalize":{less:["bootstrap/less/normalize.less"]},
-  "print":{less:["bootstrap/less/print.less"]},
+  "normalize":{stylus:["bootstrap/bootstrap-stylus/bootstrap/normalize.styl"]},
+  "print":{stylus:["bootstrap/bootstrap-stylus/bootstrap/print.styl"]},
 
-  "scaffolding":{less:["bootstrap/less/scaffolding.less"]},
-  "type":{less:["bootstrap/less/type.less"]},
-  "code":{less:["bootstrap/less/code.less"]},
-  "grid":{less:["bootstrap/less/grid.less"]},
-  "tables":{less:["bootstrap/less/tables.less"]},
-  "forms":{less:["bootstrap/less/forms.less"]},
-  "buttons":{less:["bootstrap/less/buttons.less"]},
+  "scaffolding":{stylus:["bootstrap/bootstrap-stylus/bootstrap/scaffolding.styl"]},
+  "type":{stylus:["bootstrap/bootstrap-stylus/bootstrap/type.styl"]},
+  "code":{stylus:["bootstrap/bootstrap-stylus/bootstrap/code.styl"]},
+  "grid":{stylus:["bootstrap/bootstrap-stylus/bootstrap/grid.styl"]},
+  "tables":{stylus:["bootstrap/bootstrap-stylus/bootstrap/tables.styl"]},
+  "forms":{stylus:["bootstrap/bootstrap-stylus/bootstrap/forms.styl"]},
+  "buttons":{stylus:["bootstrap/bootstrap-stylus/bootstrap/buttons.styl"]},
 
-  "glyphicons":{less:["bootstrap/less/glyphicons.less"]},
-  "button-groups":{less:["bootstrap/less/button-groups.less"]},
-  "input-groups":{less:["bootstrap/less/input-groups.less"]},
-  "navs":{less:["bootstrap/less/navs.less"]},
+  "glyphicons":{stylus:["bootstrap/bootstrap-stylus/bootstrap/glyphicons.styl"]},
+  "button-groups":{stylus:["bootstrap/bootstrap-stylus/bootstrap/button-groups.styl"]},
+  "input-groups":{stylus:["bootstrap/bootstrap-stylus/bootstrap/input-groups.styl"]},
+  "navs":{stylus:["bootstrap/bootstrap-stylus/bootstrap/navs.styl"]},
   "navbar":{
-    less:["bootstrap/less/utilities.less","bootstrap/less/forms.less","bootstrap/less/navs.less","bootstrap/less/navbar.less"],
-    js:["bootstrap/js/transition.js","bootstrap/js/collapse.js"]
+    stylus:["bootstrap/bootstrap-stylus/bootstrap/utilities.styl","bootstrap/bootstrap-stylus/bootstrap/forms.styl","bootstrap/bootstrap-stylus/bootstrap/navs.styl","bootstrap/bootstrap-stylus/bootstrap/navbar.styl"],
+    js:["bootstrap/bootstrap-stylus/js/transition.js","bootstrap/bootstrap-stylus/js/collapse.js"]
   },
-  "breadcrumbs":{less:["bootstrap/less/breadcrumbs.less"]},
-  "pagination":{less:["bootstrap/less/pagination.less"]},
-  "pager":{less:["bootstrap/less/pager.less"]},
-  "labels":{less:["bootstrap/less/labels.less"]},
-  "badges":{less:["bootstrap/less/badges.less"]},
-  "jumbotron":{less:["bootstrap/less/jumbotron.less"]},
-  "thumbnails":{less:["bootstrap/less/thumbnails.less"]},
-  "alerts":{less:["bootstrap/less/alerts.less"]},
-  "progress-bars":{less:["bootstrap/less/progress-bars.less"]},
-  "media":{less:["bootstrap/less/media.less"]},
-  "list-group":{less:["bootstrap/less/list-group.less"]},
-  "panels":{less:["bootstrap/less/panels.less"]},
-  "responsive-embed":{less:["bootstrap/less/responsive-embed.less"]},
-  "wells":{less:["bootstrap/less/wells.less"]},
-  "close":{less:["bootstrap/less/close.less"]},
+  "breadcrumbs":{stylus:["bootstrap/bootstrap-stylus/bootstrap/breadcrumbs.styl"]},
+  "pagination":{stylus:["bootstrap/bootstrap-stylus/bootstrap/pagination.styl"]},
+  "pager":{stylus:["bootstrap/bootstrap-stylus/bootstrap/pager.styl"]},
+  "labels":{stylus:["bootstrap/bootstrap-stylus/bootstrap/labels.styl"]},
+  "badges":{stylus:["bootstrap/bootstrap-stylus/bootstrap/badges.styl"]},
+  "jumbotron":{stylus:["bootstrap/bootstrap-stylus/bootstrap/jumbotron.styl"]},
+  "thumbnails":{stylus:["bootstrap/bootstrap-stylus/bootstrap/thumbnails.styl"]},
+  "alerts":{stylus:["bootstrap/bootstrap-stylus/bootstrap/alerts.styl"]},
+  "progress-bars":{stylus:["bootstrap/bootstrap-stylus/bootstrap/progress-bars.styl"]},
+  "media":{stylus:["bootstrap/bootstrap-stylus/bootstrap/media.styl"]},
+  "list-group":{stylus:["bootstrap/bootstrap-stylus/bootstrap/list-group.styl"]},
+  "panels":{stylus:["bootstrap/bootstrap-stylus/bootstrap/panels.styl"]},
+  "responsive-embed":{stylus:["bootstrap/bootstrap-stylus/bootstrap/responsive-embed.styl"]},
+  "wells":{stylus:["bootstrap/bootstrap-stylus/bootstrap/wells.styl"]},
+  "close":{stylus:["bootstrap/bootstrap-stylus/bootstrap/close.styl"]},
 
   "component-animations":{
-    less:["bootstrap/less/component-animations.less"],
-    js:["bootstrap/js/transition.js"]
+    stylus:["bootstrap/bootstrap-stylus/bootstrap/component-animations.styl"],
+    js:["bootstrap/bootstrap-stylus/js/transition.js"]
   },
   "dropdowns":{
-    less:["bootstrap/less/dropdowns.less"],
-    js:["bootstrap/js/dropdown.js"]
+    stylus:["bootstrap/bootstrap-stylus/bootstrap/dropdowns.styl"],
+    js:["bootstrap/bootstrap-stylus/js/dropdown.js"]
   },
   "modals":{
-    less:["bootstrap/less/modals.less"],
-    js:["bootstrap/js/transition.js", "bootstrap/js/modal.js"]
+    stylus:["bootstrap/bootstrap-stylus/bootstrap/modals.styl"],
+    js:["bootstrap/bootstrap-stylus/js/transition.js", "bootstrap/bootstrap-stylus/js/modal.js"]
   },
   "tooltip":{
-    less:["bootstrap/less/tooltip.less"],
-    js:["bootstrap/js/tooltip.js"]
+    stylus:["bootstrap/bootstrap-stylus/bootstrap/tooltip.styl"],
+    js:["bootstrap/bootstrap-stylus/js/tooltip.js"]
   },
   "popovers":{
-    less:["bootstrap/less/tooltip.less", "bootstrap/less/popovers.less"],
-    js:["bootstrap/js/transition.js","bootstrap/js/tooltip.js","bootstrap/js/popover.js"]
+    stylus:["bootstrap/bootstrap-stylus/bootstrap/tooltip.styl", "bootstrap/bootstrap-stylus/bootstrap/popovers.styl"],
+    js:["bootstrap/bootstrap-stylus/js/transition.js","bootstrap/bootstrap-stylus/js/tooltip.js","bootstrap/bootstrap-stylus/js/popover.js"]
   },
   "carousel":{
-    less:["bootstrap/less/carousel.less"],
-    js:["bootstrap/js/transition.js", "bootstrap/js/carousel.js"]
+    stylus:["bootstrap/bootstrap-stylus/bootstrap/carousel.styl"],
+    js:["bootstrap/bootstrap-stylus/js/transition.js", "bootstrap/bootstrap-stylus/js/carousel.js"]
   },
 
-  "affix":{js:["bootstrap/js/affix.js"]},
-  "alert":{js:["bootstrap/js/alert.js"]},
-  "button":{js:["bootstrap/js/button.js"]},
-  "collapse":{js:["bootstrap/js/transition.js","bootstrap/js/collapse.js"]},
-  "scrollspy":{js:["bootstrap/js/scrollspy.js"]},
-  "tab":{js:["bootstrap/js/tab.js"]},
-  "transition":{js:["bootstrap/js/transition.js"]},
+  "affix":{js:["bootstrap/bootstrap-stylus/js/affix.js"]},
+  "alert":{js:["bootstrap/bootstrap-stylus/js/alert.js"]},
+  "button":{js:["bootstrap/bootstrap-stylus/js/button.js"]},
+  "collapse":{js:["bootstrap/bootstrap-stylus/js/transition.js","bootstrap/bootstrap-stylus/js/collapse.js"]},
+  "scrollspy":{js:["bootstrap/bootstrap-stylus/js/scrollspy.js"]},
+  "tab":{js:["bootstrap/bootstrap-stylus/js/tab.js"]},
+  "transition":{js:["bootstrap/bootstrap-stylus/js/transition.js"]},
 
-  "utilities":{less:["bootstrap/less/utilities.less"]},
-  "responsive-utilities":{less:["bootstrap/less/responsive-utilities.less"]}
+  "utilities":{stylus:["bootstrap/bootstrap-stylus/bootstrap/utilities.styl"]},
+  "responsive-utilities":{stylus:["bootstrap/bootstrap-stylus/bootstrap/responsive-utilities.styl"]}
 };

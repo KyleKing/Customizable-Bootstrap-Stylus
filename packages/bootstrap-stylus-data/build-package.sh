@@ -7,8 +7,8 @@ set -o pipefail
 BOOTSTRAP_TAG="v3.3.4"
 PUBLISH_VERSION="3.3.4_1"
 
-BOOTSTRAP_DIR="bootstrap"
-BOOTSTRAP_LESS_DIR="$BOOTSTRAP_DIR/less"
+BOOTSTRAP_DIR="bootstrap-stylus"
+BOOTSTRAP_STYLUS_DIR="$BOOTSTRAP_DIR/bootstrap"
 BOOTSTRAP_JS_DIR="$BOOTSTRAP_DIR/js"
 BOOTSTRAP_FONT_DIR="$BOOTSTRAP_DIR/fonts"
 PACKAGE_JS="package.js"
@@ -33,7 +33,7 @@ cd ..
 cat << HEREDOC > ${PACKAGE_JS}
 Package.describe({
   name: "kyleking:bootstrap-stylus-data",
-  summary: "bootstrap data",
+  summary: "bootstrap stylus data",
   version: "${PUBLISH_VERSION}",
   git: "https://github.com/Nemo64/meteor-bootstrap-data.git"
 });
@@ -44,13 +44,13 @@ Package.onUse(function(api) {
   api.export(['BootstrapData']);
 HEREDOC
 
-LESS_FILES=`find $BOOTSTRAP_LESS_DIR -name "*.less"`
+STYLUS_FILES=`find $BOOTSTRAP_STYLUS_DIR -name "*.styl"`
 JS_FILES=`find $BOOTSTRAP_JS_DIR -name "*.js" -a ! -path '*tests*'`
 FONT_FILES="$BOOTSTRAP_DIR/fonts/*"
 
-# add all js and less files
+# add all js and styl files
 echo "  api.add_files([" >> $PACKAGE_JS
-for FILE in $LESS_FILES $JS_FILES
+for FILE in $STYLUS_FILES $JS_FILES
 do
   echo "    '$FILE'," >> $PACKAGE_JS
 done
