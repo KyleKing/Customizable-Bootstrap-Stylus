@@ -1,5 +1,4 @@
-# Customizable Bootstrap Stylus for Meteor
-==========================================
+Customizable Bootstrap Stylus for Meteor
 > This package lets you cherrypick only the Bootstrap components you need
 
 General Info
