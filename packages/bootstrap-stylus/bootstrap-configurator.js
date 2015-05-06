@@ -137,15 +137,8 @@ var handler = function (compileStep, isLiterate) {
     '$icon-font-path = "/packages/kyleking_bootstrap-stylus-data/bootstrap/bootstrap-stylus/fonts/"'
   ];
 
-console.log('\n **** stylus **** \n');
-console.log(stylus);
-
   // Find each component and push to file
   _.each(stylus, function (stylusPath) {
-
-console.log('\n **** stylusPath **** \n');
-console.log(stylusPath +'');
-
     bootstrapContent.push(getStylusContent('' + stylusPath));
   });
   createStylusFile(outputStylusFile, bootstrapContent);
