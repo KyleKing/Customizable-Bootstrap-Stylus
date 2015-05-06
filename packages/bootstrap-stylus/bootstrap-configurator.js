@@ -1,12 +1,10 @@
-// Logic file to determine which packages to include based on .json
+/*******************************************************************/
+/*   Logic file to determine which packages to include based on custom.bootstrap.json          */
+/******************************************************************/
 
 // Included packages:
-// Node filesystem
-// https://nodejs.org/api/fs.html
-var fs   = Npm.require('fs');
-// Path Path Package
-// https://nodejs.org/api/path.html
-var path = Npm.require('path');
+var fs   = Npm.require('fs'); // Node filesystem: https://nodejs.org/api/fs.html
+var path = Npm.require('path'); // Path Path Package: https://nodejs.org/api/path.html
 
 // Create file and header section of new stylus files
 var createStylusFile = function (path, content) {
@@ -14,7 +12,6 @@ var createStylusFile = function (path, content) {
 };
 
 var getAsset = function (filename) {
-  // console.log(filename);
   return BootstrapData(filename);
 };
 
@@ -27,6 +24,7 @@ var getStylusContent = function (filename) {
   });
 };
 
+// Main function
 var handler = function (compileStep, isLiterate) {
   var jsonPath = compileStep._fullInputPath;
 
@@ -98,7 +96,7 @@ var handler = function (compileStep, isLiterate) {
     });
   }
 
-  // Outputs complete file paths for new files
+  // Outputs complete file paths for new files in user meteor application
   var mixinsStylusFile = jsonPath.replace(/json$/i, 'mixins.import.styl');
   var importStylusFile = jsonPath.replace(/json$/i, 'import.styl');
   var outputStylusFile = jsonPath.replace(/json$/i, 'styl');
@@ -136,16 +134,22 @@ var handler = function (compileStep, isLiterate) {
     "// To fix that remove that file and then recover your changes.",
     '',
     '@import "' + path.basename(importStylusFile) + '"',
-    '// @icon-font-path: "/packages/kyleking_bootstrap-stylus-data/bootstrap/bootstrap-stylus/fonts/"'
+    '$icon-font-path = "/packages/kyleking_bootstrap-stylus-data/bootstrap/bootstrap-stylus/fonts/"'
   ];
 
+console.log('\n **** stylus **** \n');
+console.log(stylus);
+
   // Find each component and push to file
-// console.log('\n\n **** stylus **** \n');
-// console.log(stylus +'\n');
   _.each(stylus, function (stylusPath) {
+
+console.log('\n **** stylusPath **** \n');
+console.log(stylusPath +'');
+
     bootstrapContent.push(getStylusContent('' + stylusPath));
   });
   createStylusFile(outputStylusFile, bootstrapContent);
 };
 
+// Runs large function handler upon findins the bootstrap.json file
 Plugin.registerSourceHandler('bootstrap.json', {archMatching: 'web'}, handler);

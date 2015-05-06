@@ -1,4 +1,7 @@
 moduleDefinitions = {
+  "utilities":{stylus:["bootstrap/bootstrap-stylus/bootstrap/utilities.styl"]},
+  "responsive-utilities":{stylus:["bootstrap/bootstrap-stylus/bootstrap/responsive-utilities.styl"]},
+
   "variables":{stylus:["bootstrap/bootstrap-stylus/bootstrap/variables.styl"]},
   "mixins":{stylus:["bootstrap/bootstrap-stylus/bootstrap/mixins.styl"]},
 
@@ -68,8 +71,5 @@ moduleDefinitions = {
   "collapse":{js:["bootstrap/bootstrap-stylus/js/transition.js","bootstrap/bootstrap-stylus/js/collapse.js"]},
   "scrollspy":{js:["bootstrap/bootstrap-stylus/js/scrollspy.js"]},
   "tab":{js:["bootstrap/bootstrap-stylus/js/tab.js"]},
-  "transition":{js:["bootstrap/bootstrap-stylus/js/transition.js"]},
-
-  "utilities":{stylus:["bootstrap/bootstrap-stylus/bootstrap/utilities.styl"]},
-  "responsive-utilities":{stylus:["bootstrap/bootstrap-stylus/bootstrap/responsive-utilities.styl"]}
+  "transition":{js:["bootstrap/bootstrap-stylus/js/transition.js"]}
 };
