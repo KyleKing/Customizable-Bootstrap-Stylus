@@ -1,13 +1,15 @@
+# Generates the package contents and programmatically defines the package.js files
 #!/usr/bin/env bash
 
 set -e
 set -u
 set -o pipefail
 
-BOOTSTRAP_TAG="v3.3.4"
-PUBLISH_VERSION="3.3.4_1"
+# Establish Variables
+BOOTSTRAP_TAG="4.0.4"
+PUBLISH_VERSION="4.0.4"
 
-BOOTSTRAP_DIR="bootstrap-stylus"
+BOOTSTRAP_DIR="bootstrap/bootstrap-stylus"
 BOOTSTRAP_STYLUS_DIR="$BOOTSTRAP_DIR/bootstrap"
 BOOTSTRAP_JS_DIR="$BOOTSTRAP_DIR/js"
 BOOTSTRAP_FONT_DIR="$BOOTSTRAP_DIR/fonts"
@@ -25,17 +27,21 @@ fi
 
 git submodule update
 
+# Check out latest version of bootstrap set in the tag above
 cd "${BOOTSTRAP_DIR}"
 git checkout "${BOOTSTRAP_TAG}"
 
-cd ..
 
+# Exit the submodule and return to the package folder
+cd ../../
+
+# Create package.js file for Meteor
 cat << HEREDOC > ${PACKAGE_JS}
 Package.describe({
   name: "kyleking:bootstrap-stylus-data",
   summary: "bootstrap stylus data",
   version: "${PUBLISH_VERSION}",
-  git: "https://github.com/Nemo64/meteor-bootstrap-data.git"
+  // git: "https://github.com/Nemo64/meteor-bootstrap-data.git"
 });
 
 Package.onUse(function(api) {

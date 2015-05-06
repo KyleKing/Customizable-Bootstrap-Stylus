@@ -1,6 +1,5 @@
-// Method exported to the Bootstrap-Stylus package to find relevant filenames
+// Method exported to the Bootstrap-Stylus package
+// Exports entire text contents of specified 'file'
 BootstrapData = function (file) {
-  // console.log('\n\n***** Assets.getText(file) *****\n');
-  // console.log(Assets.getText(file) + '\n\n');
   return Assets.getText(file);
 };

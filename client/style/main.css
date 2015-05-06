@@ -1,6 +1,3 @@
-/* Notice: title main.css to load last when meteor loads the less bootstrap files */
-/* Should probably build a workaround to work with css better */
-
 #footer > .container {
   /* Align with the navbar container */
   padding-left: 15px;

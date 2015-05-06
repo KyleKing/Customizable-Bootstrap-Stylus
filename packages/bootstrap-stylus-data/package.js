@@ -1,9 +1,9 @@
 Package.describe({
   name: "kyleking:bootstrap-stylus-data",
-  summary: "bootstrap data",
-});
-  // version: "3.3.4_1",
+  summary: "bootstrap stylus data",
+  version: "4.0.4",
   // git: "https://github.com/Nemo64/meteor-bootstrap-data.git"
+});
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.2.2');
@@ -12,7 +12,6 @@ Package.onUse(function(api) {
   api.add_files([
     'bootstrap/bootstrap-stylus/bootstrap/alerts.styl',
     'bootstrap/bootstrap-stylus/bootstrap/badges.styl',
-    'bootstrap/bootstrap-stylus/bootstrap/index.styl',
     'bootstrap/bootstrap-stylus/bootstrap/breadcrumbs.styl',
     'bootstrap/bootstrap-stylus/bootstrap/button-groups.styl',
     'bootstrap/bootstrap-stylus/bootstrap/buttons.styl',
@@ -24,6 +23,7 @@ Package.onUse(function(api) {
     'bootstrap/bootstrap-stylus/bootstrap/forms.styl',
     'bootstrap/bootstrap-stylus/bootstrap/glyphicons.styl',
     'bootstrap/bootstrap-stylus/bootstrap/grid.styl',
+    'bootstrap/bootstrap-stylus/bootstrap/index.styl',
     'bootstrap/bootstrap-stylus/bootstrap/input-groups.styl',
     'bootstrap/bootstrap-stylus/bootstrap/jumbotron.styl',
     'bootstrap/bootstrap-stylus/bootstrap/labels.styl',
