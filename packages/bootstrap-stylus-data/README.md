@@ -1,6 +1,6 @@
 meteor-bootstrap-data
 =====================
-This package does nothing more than providing server side access to bootstrap files.
+This package does nothing more than providing server side access to bootstrap stylus files.
 It also adds the static font for the frontend.
 
 However this package is most likely useless for you on it's own.
