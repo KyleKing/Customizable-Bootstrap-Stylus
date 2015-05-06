@@ -1,3 +1,10 @@
+# Note if "-dirty error": delete the submodule folder with:
+# cd path/to/packages/bootstrap-stylus-data/bootstrap
+# rmdir -rf bootstrap-stylus/ # be careful!
+# Then update the submodule because you only deleted the content:
+# git submodule update
+
+
 # Generates the package contents and programmatically defines the package.js files
 #!/usr/bin/env bash
 
