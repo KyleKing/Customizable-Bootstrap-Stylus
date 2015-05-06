@@ -70,7 +70,7 @@ var handler = function (compileStep, isLiterate) {
       return true; // continue
     }
 
-    _.each(moduleDefinition.styl || [], function (file) {
+    _.each(moduleDefinition.stylus || [], function (file) {
       stylus[file] = file;
     });
     _.each(moduleDefinition.js || [], function (file) {
@@ -95,10 +95,10 @@ var handler = function (compileStep, isLiterate) {
     });
   }
 
-  // Outputs complete file paths
+  // Outputs complete file paths for new files
   var mixinsStylusFile = jsonPath.replace(/json$/i, 'mixins.import.styl');
   var importStylusFile = jsonPath.replace(/json$/i, 'import.styl');
-  var outputStylusFile = jsonPath.replace(/json$/i, 'stylus');
+  var outputStylusFile = jsonPath.replace(/json$/i, 'styl');
 
   // Create file with header descriptor section
   // Create mixins file
@@ -118,7 +118,7 @@ var handler = function (compileStep, isLiterate) {
       "// You may include this file into your stylus files to benefit from",
       "// mixins and variables that bootstrap provides.",
       '',
-      '@import "' + path.basename(mixinsStylusFile) + '";',
+      '@import "' + path.basename(mixinsStylusFile) + '"',
       getStylusContent('bootstrap/bootstrap-stylus/bootstrap/variables.styl')
     ]);
   }
@@ -132,11 +132,13 @@ var handler = function (compileStep, isLiterate) {
     "// If it throws errors your bootstrap.import.styl is probably invalid.",
     "// To fix that remove that file and then recover your changes.",
     '',
-    '@import "' + path.basename(importStylusFile) + '";',
-    '@icon-font-path: "/packages/kyleking_bootstrap-stylus-data/bootstrap/bootstrap-stylus/fonts/";'
+    '@import "' + path.basename(importStylusFile) + '"',
+    '// @icon-font-path: "/packages/kyleking_bootstrap-stylus-data/bootstrap/bootstrap-stylus/fonts/"'
   ];
 
   // Find each component and push to file
+// console.log('\n\n **** stylus **** \n');
+// console.log(stylus +'\n');
   _.each(stylus, function (stylusPath) {
     bootstrapContent.push(getStylusContent('' + stylusPath));
   });

@@ -7,7 +7,6 @@ var path = Npm.require('path');
 
 // Create file and header section of new less files
 var createLessFile = function (path, content) {
-  // console.log(content);
   fs.writeFileSync(path, content.join('\n'), { encoding: 'utf8' });
 };
 
@@ -19,8 +18,6 @@ var getAsset = function (filename) {
 var getLessContent = function (filename) {
   var content = getAsset(filename);
   return '\n\n// @import "' + filename + '"\n' + content.replace(/@import\s*["']([^"]+)["'];?/g, function (statement, importFile) {
-    console.log('\n\n***** importFile *****\n');
-    console.log(importFile);
     return getLessContent(path.join(path.dirname(filename), importFile));
   });
 };
@@ -40,8 +37,6 @@ var handler = function (compileStep, isLiterate) {
   // parse configuration
   try {
     userConfiguration = JSON.parse(userConfiguration);
-    console.log('/n userConfiguration:');
-    console.log(userConfiguration);
   } catch (e) {
     compileStep.error({
       message: e.message,
