@@ -1,3 +1,6 @@
+// Logic file to determine which packages to include based on .json
+
+// Included packages:
 // Node filesystem
 // https://nodejs.org/api/fs.html
 var fs   = Npm.require('fs');

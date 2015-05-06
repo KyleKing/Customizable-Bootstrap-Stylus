@@ -1,9 +1,9 @@
 Package.describe({
   name: "kyleking:bootstrap-less-data",
   summary: "bootstrap data",
+  version: "3.3.4_1",
+  git: "https://github.com/Nemo64/meteor-bootstrap-data.git"
 });
-  // version: "3.3.4_1",
-  // git: "https://github.com/Nemo64/meteor-bootstrap-data.git"
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.2.2');

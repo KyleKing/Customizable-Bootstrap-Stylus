@@ -130,7 +130,7 @@ var handler = function (compileStep, isLiterate) {
     "// To fix that remove that file and then recover your changes.",
     '',
     '@import "' + path.basename(importLessFile) + '";',
-    '@icon-font-path: "/packages/kyleking_bootstrap-stylus-data/bootstrap/fonts/";'
+    '@icon-font-path: "/packages/kyleking_bootstrap-less-data/bootstrap/fonts/";'
   ];
   _.each(less, function (lessPath) {
     bootstrapContent.push(getLessContent('' + lessPath));
