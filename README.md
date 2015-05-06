@@ -20,7 +20,7 @@ Installation
 This file is to configure which bootstrap parts you need in your project. Set those you like to `true`!
 If the file is empty, it will be filled for with the following content:
 
-```JSON
+```
 distributedConfiguration = [
   '{',
     '"modules" : {',
