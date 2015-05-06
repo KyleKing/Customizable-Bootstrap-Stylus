@@ -1,5 +1,7 @@
 {
   "modules" : {
+    "utilities"            : true,
+
     "normalize"            : true,
     "print"                : false,
     "glyphicons"           : true,
@@ -48,7 +50,6 @@
     "tab"                  : false,
     "transition"           : false,
 
-    "utilities"            : false,
     "responsive-utilities" : false
   }
 }
