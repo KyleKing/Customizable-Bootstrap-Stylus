@@ -1,9 +1,13 @@
+// Copy and pasted from bootstrap-stylus/bootstrap/index.styl 
+// remove @import and add the necessary quoatation marks and commas
+// As the index.styl file is pretty static, a shell script probably isn't necessary
+
 distributedConfiguration = [
   '{',
     '"modules" : {',
       '"variables": true,',
       '"mixins": true,',
-
+      '',
       '"normalize": true,',
       '"print": true,',
       '"glyphicons": true,',

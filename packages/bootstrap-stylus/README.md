@@ -1,15 +1,18 @@
-Bootstrap for meteor
-====================
+# Customizable Bootstrap Stylus for Meteor
+==========================================
+> This package lets you cherrypick only the Bootstrap components you need
 
-This package integrates bootstrap into meteor and lets you configure what parts you need.
+General Info
+------------
+This package places all relevant source code into your meteor project so you have full control over any styles imported. Simply import the bootstrap mixins and variables as you would with a manual install, but without any of the headaches (those were all mine retrofitting this for you :) ).
 
-How to install
---------------
+Installation
+------------
 
-1. execute `meteor add nemo64:bootstrap less`
-2. create an empty `custom.bootstrap.json` file somewhere in your project. (`/client/lib/custom.bootstrap.json` for example)
-3. start meteor and then edit the file you just created (see [custom.bootstrap.json](#custombootstrapjson)).
-4. (optional) edit `custom.bootstrap.import.less` which now appeared next to the json file
+1. Execute `meteor add kyleking:bootstrap stylus`
+2. Create an empty `custom.bootstrap.json` file somewhere in your project. (`/client/style/lib/custom.bootstrap.json` for example)
+3. Start 'meteor' and change the true false values in the json file you just created to mimic what you would like in your porject(see [custom.bootstrap.json](#custombootstrapjson))
+4. (optional) Now you have full control over `custom.bootstrap.import.less` (this is only generated once and won't be overwritten) which will have appeared next to your json file
 
 `custom.bootstrap.json`
 ---------------------
@@ -17,78 +20,63 @@ This file is to configure which bootstrap parts you need in your project. Set th
 If the file is empty, it will be filled for with the following content:
 
 ```JSON
-{
-  "modules" : {
-    "normalize"            : true,
-    "print"                : false,
-    "glyphicons"           : false,
-
-    "scaffolding"          : false,
-    "type"                 : false,
-    "code"                 : false,
-    "grid"                 : false,
-    "tables"               : false,
-    "forms"                : false,
-    "buttons"              : false,
-
-    "component-animations" : false,
-    "dropdowns"            : false,
-    "button-groups"        : false,
-    "input-groups"         : false,
-    "navs"                 : false,
-    "navbar"               : false,
-    "breadcrumbs"          : false,
-    "pagination"           : false,
-    "pager"                : false,
-    "labels"               : false,
-
-    "badges"               : false,
-    "jumbotron"            : false,
-    "thumbnails"           : false,
-    "alerts"               : false,
-    "progress-bars"        : false,
-    "media"                : false,
-    "list-group"           : false,
-    "panels"               : false,
-    "responsive-embed"     : false,
-    "wells"                : false,
-    "close"                : false,
-
-    "modals"               : false,
-    "tooltip"              : false,
-    "popovers"             : false,
-    "carousel"             : false,
-
-    "affix"                : false,
-    "alert"                : false,
-    "button"               : false,
-    "collapse"             : false,
-    "scrollspy"            : false,
-    "tab"                  : false,
-    "transition"           : false,
-
-    "utilities"            : false,
-    "responsive-utilities" : false
-  }
-}
+distributedConfiguration = [
+  '{',
+    '"modules" : {',
+      '"variables": true,',
+      '"mixins": true,',
+      '',
+      '"normalize": true,',
+      '"print": true,',
+      '"glyphicons": true,',
+      '',
+      '"scaffolding": true,',
+      '"utilities": true,',
+      '"type": true,',
+      '"code": true,',
+      '"grid": true,',
+      '"tables": true,',
+      '"forms": true,',
+      '"buttons": true,',
+      '',
+      '"component-animations": true,',
+      '"dropdowns": true,',
+      '"button-groups": true,',
+      '"input-groups": true,',
+      '"navs": true,',
+      '"navbar": true,',
+      '"breadcrumbs": true,',
+      '"pagination": true,',
+      '"pager": true,',
+      '"labels": true,',
+      '"badges": true,',
+      '"jumbotron": true,',
+      '"thumbnails": true,',
+      '"alerts": true,',
+      '"progress-bars": true,',
+      '"media": true,',
+      '"list-group": true,',
+      '"panels": true,',
+      '"responsive-embed": true,',
+      '"wells": true,',
+      '"close": true,',
+      '',
+      '"modals": true,',
+      '"tooltip": true,',
+      '"popovers": true,',
+      '"carousel": true,',
+      '',
+      '"responsive-utilities": true',
+    '}',
+  '}'
+].join('\n');
 ```
 
-Upgrading
----------
-
-When upgrading, you may get an error stating:
-
-```
-While building the application:
-   client/lib/custom.bootstrap.less:1629:18: Less compiler error: variable @form-group-margin-bottom is undefined
-```
-
-If so, See https://github.com/Nemo64/meteor-bootstrap/issues/42 for the fix.
 
 Contribution
 -------
 
-Contributions are always welcome. I'm also searching for collaborators becuase I'm currently not actively deveolping with meteor. If you area interested, write me at git@marco.zone
+Contributions are always welcome! Help me bug test and fix this package, so I can release it on Atmosphere
 
 License
 -------
@@ -99,4 +87,4 @@ Also, look at the [Bootstrap license](https://github.com/twbs/bootstrap/blob/v3.
 Origin
 ------
 
-This package is based on and inspired by the [bootstrap3-less](https://github.com/simison/bootstrap3-less) package. I created a new repository because it takes a completely different approach now which is also incompatible.
+This package is very closely based on the [meteor-bootstrap](https://github.com/Nemo64/meteor-bootstrap) package. I created a new repository to test porting the same method to a stylus bootstrap package. Both of @Nemo64's packages are included for comparison.

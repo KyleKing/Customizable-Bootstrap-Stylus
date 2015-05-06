@@ -1,3 +1,7 @@
+### v.Stylus
+- All previous work was done by @Nemo64 who has done a fantastic job of creating this package for Less
+- I ported his work to comply with a bootstrap stylus and import it in the same way
+
 ### v.next
 
 - e5c2607 (HEAD, origin/master, origin/HEAD, master) Update README.md
