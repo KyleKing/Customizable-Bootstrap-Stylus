@@ -1,6 +1,6 @@
 # Note if "-dirty error": delete the submodule folder with:
-# cd path/to/packages/bootstrap-stylus-data/bootstrap
-# rmdir -rf bootstrap-stylus/ # be careful!
+# cd path/to/packages/bootstrap-stylus-data/
+# rmdir -rf bootstrap/ # be careful!
 # Then update the submodule because you only deleted the content:
 # git submodule update
 
@@ -16,7 +16,7 @@ set -o pipefail
 BOOTSTRAP_TAG="4.0.4"
 PUBLISH_VERSION="4.0.4"
 
-BOOTSTRAP_DIR="bootstrap/bootstrap-stylus"
+BOOTSTRAP_DIR="bootstrap"
 BOOTSTRAP_STYLUS_DIR="$BOOTSTRAP_DIR/bootstrap"
 BOOTSTRAP_JS_DIR="$BOOTSTRAP_DIR/js"
 BOOTSTRAP_FONT_DIR="$BOOTSTRAP_DIR/fonts"
@@ -40,7 +40,7 @@ git checkout "${BOOTSTRAP_TAG}"
 
 
 # Exit the submodule and return to the package folder
-cd ../../
+cd ../
 
 # Create package.js file for Meteor
 cat << HEREDOC > ${PACKAGE_JS}
