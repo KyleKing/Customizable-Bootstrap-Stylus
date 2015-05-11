@@ -4,14 +4,14 @@ Customizable Bootstrap Stylus for Meteor
 
 General Info
 ============
-This pacakge uses a git submodule of the current bootstrap-stylus port. By choosing true or false on the options below, you can easily customize what bootstrap components you want in your application. Choose as little or as many as you like. The entire import will be placed into an easily accessible file so you can see which styles are affected and easily import the mixins, variables, and extend components in a native-feeling stylus folder.
+This package uses a git submodule of the current bootstrap-stylus port. By choosing true or false on the options below, you can easily customize what bootstrap components you want in your application. Choose as little or as many as you like. The entire import will be placed into an easily accessible file so you can see which styles are affected and easily import the mixins, variables, and extend components in a native-feeling stylus folder.
 
 For testing, the Bootstrap TLDR html template is used. To run the test, download this repository and change directory to the test folder. Run ```meteor``` and point your browser to [localhost:3000](http://localhost:3000/). If anything looks amiss, please let me know through the [Github issues page][issue]. As a comparison, the LESS packages that this package is based on are included, as they helped tremendously in buidling this stylus port.
 
 Installation
 ------------
 
-1. Execute `meteor add kyleking:Customizable-Bootstrap-Stylus`
+1. Execute `meteor add kyleking:customizable-bootstrap-stylus`
 2. Create an empty `custom.bootstrap.json` file somewhere in your project. (for example: `/client/style/lib/custom.bootstrap.json`, then the rest of your style sheets can be placed in `/client/style/index.styl`, etc.)
 3. Start `meteor`
 4. Based on preference, change the true/false values to only the components you would like, (see [custom.bootstrap.json](#custombootstrapjson))
@@ -104,7 +104,7 @@ Thanks for scrolling this far, if you want to get in touch:
 
 <!-- Links stored as variables -->
 
-[issue]: https://github.com/KyleKing/Customizable-Bootstrap-Stylus/issues
+[issue]: https://github.com/KyleKing/customizable-bootstrap-stylus/issues
 
 
 

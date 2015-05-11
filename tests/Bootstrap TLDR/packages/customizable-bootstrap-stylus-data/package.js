@@ -1,8 +1,8 @@
 Package.describe({
-  name: "kyleking:Customizable-Bootstrap-Stylus-Data",
+  name: "kyleking:customizable-bootstrap-stylus-data",
   summary: "Raw bootstrap-stylus package",
   version: "4.0.4",
-  git: "https://github.com/kyleking/Customizable-Bootstrap-Stylus-Data.git"
+  git: "https://github.com/kyleking/customizable-bootstrap-stylus-data.git"
 });
 
 Package.onUse(function(api) {

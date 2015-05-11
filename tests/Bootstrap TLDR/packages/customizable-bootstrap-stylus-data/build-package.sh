@@ -45,10 +45,10 @@ cd ../../
 # Create package.js file for Meteor
 cat << HEREDOC > ${PACKAGE_JS}
 Package.describe({
-  name: "kyleking:Customizable-Bootstrap-Stylus-Data",
+  name: "kyleking:customizable-bootstrap-stylus-data",
   summary: "Raw bootstrap-stylus package",
   version: "${PUBLISH_VERSION}",
-  git: "https://github.com/kyleking/Customizable-Bootstrap-Stylus-Data.git"
+  git: "https://github.com/kyleking/customizable-bootstrap-stylus-data.git"
 });
 
 Package.onUse(function(api) {

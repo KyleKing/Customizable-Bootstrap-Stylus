@@ -11,7 +11,7 @@ insecure
 # less
 # kyleking:bootstrap-less
 stylus
-# kyleking:customizable-bootstrap-stylus
+kyleking:customizable-bootstrap-stylus
 # Integrate common font choices as well?
 # chriswessels:glyphicons-halflings
 # fortawesome:fontawesome
