@@ -1,6 +1,6 @@
 ### v.Stylus
-- All previous work was done by @Nemo64 who has done a fantastic job of creating this package for Less
-- I ported his work to comply with a bootstrap stylus and import it in the same way
+- All previous work was done by @Nemo64 who has done a fantastic job of creating this package for LESS
+- I ported his work to support bootstrap-stylus as an alternative
 
 ### v.next
 

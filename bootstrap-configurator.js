@@ -134,7 +134,7 @@ var handler = function (compileStep, isLiterate) {
     "// To fix that remove that file and then recover your changes.",
     '',
     '@import "' + path.basename(importStylusFile) + '"',
-    '$icon-font-path = "/packages/kyleking_bootstrap-stylus-data/bootstrap/bootstrap-stylus/fonts/"'
+    '$icon-font-path = "/packages/kyleking_Customizable-Bootstrap-Stylus-Data/bootstrap/bootstrap-stylus/fonts/"'
   ];
 
   // Find each component and push to file

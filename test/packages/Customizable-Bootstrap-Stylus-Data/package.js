@@ -1,8 +1,8 @@
 Package.describe({
-  name: "kyleking:bootstrap-stylus-data",
-  summary: "bootstrap stylus data",
+  name: "kyleking:Customizable-Bootstrap-Stylus-Data",
+  summary: "Raw bootstrap-stylus package",
   version: "4.0.4",
-  // git: "https://github.com/Nemo64/meteor-bootstrap-data.git"
+  git: "https://github.com/kyleking/Customizable-Bootstrap-Stylus-Data.git"
 });
 
 Package.onUse(function(api) {

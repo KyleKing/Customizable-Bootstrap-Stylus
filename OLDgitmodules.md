@@ -1,0 +1,6 @@
+# [submodule "packages/bootstrap-less-data/bootstrap"]
+# 	path = packages/bootstrap-less-data/bootstrap
+# 	url = https://KyleKing@github.com/twbs/bootstrap
+# [submodule "packages/bootstrap-stylus-data/bootstrap/bootstrap-stylus"]
+# 	path = packages/bootstrap-stylus-data/bootstrap/bootstrap-stylus
+# 	url = https://github.com/maxmx/bootstrap-stylus

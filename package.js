@@ -1,11 +1,11 @@
 Package.describe({
-  name: 'kyleking:bootstrap-stylus',
-  summary: "Highly configurable bootstrap integration.",
+  name: 'kyleking:Customizable-Bootstrap-Stylus',
+  summary: "Highly configurable bootstrap-stylus integration.",
+  version: "3.3.4_2",
+  git: "https://github.com/KyleKing/Customizable-Bootstrap-Stylus"
 });
-  // version: "3.3.4_2",
-  // git: "https://github.com/Nemo64/meteor-bootstrap"
 
-var DataPackage = 'kyleking:bootstrap-stylus-data';
+var DataPackage = 'kyleking:Customizable-Bootstrap-Stylus-Data';
 
 
 Package._transitional_registerBuildPlugin({
