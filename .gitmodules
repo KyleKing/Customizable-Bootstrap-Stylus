@@ -1,0 +1,6 @@
+[submodule "test/packages/Customizable-Bootstrap-Stylus-Data/bootstrap"]
+	path = test/packages/Customizable-Bootstrap-Stylus-Data/bootstrap
+	url = https://KyleKing@github.com/maxmx/bootstrap-stylus
+[submodule "test/packages/bootstrap-less-data/bootstrap"]
+	path = test/packages/bootstrap-less-data/bootstrap
+	url = https://KyleKing@github.com/twbs/bootstrap
