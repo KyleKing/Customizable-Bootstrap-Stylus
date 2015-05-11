@@ -7,11 +7,12 @@
 meteor-platform
 autopublish
 insecure
-# Add check for proper less compiler?
-less
-kyleking:bootstrap-less
-# stylus
-# kyleking:customizable-bootstrap-stylus
+
+# Choose between local packages in /packages folder:
+# less
+# kyleking:bootstrap-less
+stylus
+kyleking:customizable-bootstrap-stylus
+
 # Integrate common font choices as well?
-# chriswessels:glyphicons-halflings
 # fortawesome:fontawesome
