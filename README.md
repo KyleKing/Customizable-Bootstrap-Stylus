@@ -1,25 +1,28 @@
-# Customizable Bootstrap Stylus for Meteor
-> This package lets you cherrypick only the Bootstrap components you want using Stylus!
+Customizable Bootstrap Stylus for Meteor
+========================================
+> A meteor package to customize the bootstrap-stylus package!
 
 General Info
-------------
-This package places all relevant source code into your meteor project so you have full control over any styles imported. Simply import the bootstrap mixins and variables as you would with a manual install, but without any of the headaches (those were all mine retrofitting this for you :) ).
+============
+This pacakge uses a git submodule of the current bootstrap-stylus port. By choosing true or false on the options below, you can easily customize what bootstrap components you want in your application. Choose as little or as many as you like. The entire import will be placed into an easily accessible file so you can see which styles are affected and easily import the mixins, variables, and extend components in a native-feeling stylus folder.
 
-The package is a complete meteor app that runs the bootstrap tldr file. I'm testing to make sure that each bootstrap component compiles correctly with both a set of LESS packages and Stylus packages. As of now, the build should be relatively stable and will be available on Atmosphere this week.
+For testing, the Bootstrap TLDR html template is used. To run the test, download this repository and change directory to the test folder. Run ```meteor``` and point your browser to [localhost:3000](http://localhost:3000/). If anything looks amiss, please let me know through the [Github issues page][issue]. As a comparison, the LESS packages that this package is based on are included, as they helped tremendously in buidling this stylus port.
 
 Installation
 ------------
 
-1. Execute `meteor add kyleking:bootstrap stylus` (only works for local package/bootstrap-stylus and package/bootstrap-stylus-data as it is not yet on atmosphere)
-2. Create an empty `custom.bootstrap.json` file somewhere in your project. (`/client/style/lib/custom.bootstrap.json` for example)
-3. Start 'meteor' and change the true false values in the json file you just created to mimic what you would like in your porject(see [custom.bootstrap.json](#custombootstrapjson))
-4. (optional) Now you have full control over `custom.bootstrap.import.less` (this is only generated once and won't be overwritten) which will have appeared next to your json file
+1. Execute `meteor add kyleking:Customizable-Bootstrap-Stylus`
+2. Create an empty `custom.bootstrap.json` file somewhere in your project. (for example: `/client/style/lib/custom.bootstrap.json`, then the rest of your style sheets can be placed in `/client/style/index.styl`, etc.)
+3. Start `meteor`
+4. Based on preference, change the true/false values to only the components you would like, (see [custom.bootstrap.json](#custombootstrapjson))
+4. (optional) Edit the global bootstrap variables inside `custom.bootstrap.import.styl` (this file is only generated once and won't be overwritten)
 
-`custom.bootstrap.json`
----------------------
-This file is to configure which bootstrap parts you need in your project. Set those you like to `true`!
+
+Example `custom.bootstrap.json`
+------------------------------
+This file is to configure which bootstrap parts you want in your project. Set those you like to `true`
+
 If the file is empty, it will be filled for with the following content:
-
 ```
 distributedConfiguration = [
   '{',
@@ -73,19 +76,36 @@ distributedConfiguration = [
 ].join('\n');
 ```
 
+Misc
+====
 
 Contribution
 -------
 
-Contributions are always welcome! Help me bug test and fix this package, so I can release it on Atmosphere
+Contributions are always welcome! Help me bug test and fix this package by submitting an [issue][issue].
 
 License
 -------
 
-This package is licensed with the MIT license.
-Also, look at the [Bootstrap license](https://github.com/twbs/bootstrap/blob/v3.2.0/LICENSE).
+This package is licensed with the MIT license and the [Bootstrap license](https://github.com/twbs/bootstrap/blob/v3.2.0/LICENSE) respectively.
 
 Origin
 ------
 
-This package is very closely based on the [meteor-bootstrap](https://github.com/Nemo64/meteor-bootstrap) package. I created a new repository to test porting the same method to a stylus bootstrap package. Both of @Nemo64's packages are included for comparison.
+This package is a port of the [meteor-bootstrap](https://github.com/Nemo64/meteor-bootstrap) package from LESS to stylus. Both of @Nemo64's packages are included as I used them in developing.
+
+About Me
+--------
+
+Thanks for scrolling this far, if you want to get in touch:
+
+ * [My website](http://kyleking.github.io) (kyleking.github.io)
+ * [Twitter](http://twitter.com/Kyle4Miles) (@Kyle4Miles)
+
+<!-- Links stored as variables -->
+
+[issue]: https://github.com/KyleKing/Customizable-Bootstrap-Stylus/issues
+
+
+
+
