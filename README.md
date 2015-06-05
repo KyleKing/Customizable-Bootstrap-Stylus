@@ -4,9 +4,9 @@ Customizable Bootstrap Stylus for Meteor
 
 General Info
 ============
-This pacakge uses a git submodule of the current bootstrap-stylus port. By choosing true or false on the options below, you can easily customize what bootstrap components you want in your application. Choose as little or as many as you like. The entire import will be placed into an easily accessible file so you can see which styles are affected and easily import the mixins, variables, and extend components in a native-feeling stylus folder.
+This package uses a git submodule of the current bootstrap-stylus port. By choosing true or false on the options below, you can easily customize what bootstrap components you want in your application. Choose as little or as many as you like. The entire import will be placed into an easily accessible file so you can see which styles are affected and easily import the mixins, variables, and extend components in a native-feeling stylus folder.
 
-For testing, the Bootstrap TLDR html template is used. To run the test, download this repository and change directory to the test folder. Run ```meteor``` and point your browser to [localhost:3000](http://localhost:3000/). If anything looks amiss, please let me know through the [Github issues page][issue]. As a comparison, the LESS packages that this package is based on are included, as they helped tremendously in buidling this stylus port.
+For testing, the Bootstrap TLDR html template is used. To run the test, download this repository and change directory to the test folder. Run ```meteor``` and point your browser to [localhost:3000](http://localhost:3000/). If anything looks amiss, please let me know through the [Github issues page][issue]. As a comparison, the LESS packages that this package is based on are included, as they helped tremendously in building this stylus port.
 
 Installation
 ------------
