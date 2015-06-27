@@ -1,78 +1,66 @@
-// @import "lib/custom.bootstrap.import.styl"
 // @import "lib/custom.bootstrap.mixins.import.styl"
+@import "lib/custom.bootstrap.import.styl"
 
 
-// // Use Stylus demo as a sanity check
-// red = #E33E1E
-// yellow = #E2E21E
 
-// .message
-//   // @extends .clearfix
-//   // .clearfix
-//   padding: 10px
-//   font: 14px Helvetica
-//   border: 1px solid #eee
+// Use Stylus demo as a sanity check
+red = #E33E1E
+yellow = #E2E21E
 
-// .warning
-//   @extends .message
-//   border-color: yellow
-//   background: yellow + 70%
+.message
+  // @extends .clearfix
+  // .clearfix
+  padding: 10px
+  font: 14px Helvetica
+  border: 1px solid #eee
 
-// .error-text
-//   @extends .message
-//   border-color: red
-//   background: red + 70%
+.warning
+  @extends .message
+  border-color: yellow
+  background: yellow + 70%
 
-// .fatal
-//   @extends .error-text
-//   font-weight: bold
-//   color: red
+.error-text
+  @extends .message
+  border-color: red
+  background: red + 70%
+
+.fatal
+  @extends .error-text
+  font-weight: bold
+  color: red
 
 
-// // If that goes well try a very basic mixin using bootstrap's syntax:
-// test-text()
-//   background-color transparent
-//   border 0
+// If that goes well try a very basic mixin using bootstrap's syntax:
+test-text()
+  background-color transparent
+  border 0
 
+.wrapper
+	text-hide()
+	// test-text()
+	// make-row()
+  // @extends .show-text()
+  // @extends .make-row
+
+
+
+
+// Then full blown test from the above import file
+header
+  .brand
+    make-sm-column(4)
+
+.test
+  make-row()
+
+
+
+
+// // Put your Stylus code here!
 // .wrapper
-// 	text-hide()
-// 	test-text()
-// 	make-row()
-//   // @extends .show-text()
-//   // @extends .make-row
-
-// // Then full blown test from the above import file
-// header
-//   .brand
-//     make-sm-column(4)
-
-
-// .clearfix()
-//   &:before,
-//   &:after
-//     content " " // 1
-//     display table // 2
-
-//   &:after
-//     clear both
-
-// // Creates a wrapper for a series of columns
-// make-row($gutter = 100)
-//   margin-left ($gutter / -2)
-//   margin-right ($gutter / -2)
-//   @extend .clearfix()
-
-// .test
-//   make-row()
-
-
-
-
-// // // Put your Stylus code here!
-// // .wrapper
-// //   @extend .make-row()
-// // .content-main
-// //   @extend .make-lg-column(8)
-// // .content-secondary
-// //   @extend .make-lg-column(3)
-// //   @extend .make-lg-column-offset(1)
+//   @extend .make-row()
+// .content-main
+//   @extend .make-lg-column(8)
+// .content-secondary
+//   @extend .make-lg-column(3)
+//   @extend .make-lg-column-offset(1)
