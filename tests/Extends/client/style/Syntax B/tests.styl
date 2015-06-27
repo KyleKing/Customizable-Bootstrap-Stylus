@@ -1,0 +1,71 @@
+// Test without importing and using bootstrap syntax
+// Edited Syntax A is below the original Bootstrap syntax
+
+// -----------------------------------------------
+
+// Troublesome styles from lib/custom.bootstrap.mixins.import.styl
+// Changes left unaltered
+
+
+// @import "bootstrap/bootstrap/mixins/clearfix.styl"
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+// contenteditable attribute is included anywhere else in the document.
+// Otherwise it causes space to appear at the top and bottom of elements
+// that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+// `:before` to contain the top-margins of child elements.
+//
+// Source http://nicolasgallagher.com/micro-clearfix-hack/
+clearfix()
+  &:before,
+  &:after
+    content " " // 1
+    display table // 2
+
+  &:after
+    clear both
+
+// .clearfix()
+//   &:before,
+//   &:after
+//     content " " // 1
+//     display table // 2
+
+//   &:after
+//     clear both
+
+
+.clearfix
+  clearfix()
+
+
+// Creates a wrapper for a series of columns
+make-row($gutter = $grid-gutter-width)
+  margin-left ($gutter / -2)
+  margin-right ($gutter / -2)
+  @extend .clearfix
+
+// // Creates a wrapper for a series of columns
+// make-row($gutter = $grid-gutter-width)
+//   margin-left ($gutter / -2)
+//   margin-right ($gutter / -2)
+//   @extend .clearfix()
+
+
+
+// -----------------------------------------------
+
+// From vars.import.styl
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width ?=         30px
+
+// -----------------------------------------------
+
+
+// test.styl
+
+.test
+	make-row()
