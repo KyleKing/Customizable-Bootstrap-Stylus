@@ -1,5 +1,0 @@
-[submodule "tests/Bootstrap TLDR/packages/bootstrap-less-data/bootstrap"]
-	path = tests/Bootstrap TLDR/packages/bootstrap-less-data/bootstrap
-	url = https://KyleKing@github.com/twbs/bootstrap
-[submodule "tests/Extends/packages/bootstrap-less-data/bootstrap"]
-	path = tests/Extends/packages/bootstrap-less-data/bootstrap
