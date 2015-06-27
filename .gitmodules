@@ -1,0 +1,3 @@
+[submodule "tests/Extends/packages/Customizable-Bootstrap-Stylus-Data/bootstrap"]
+	path = tests/Extends/packages/Customizable-Bootstrap-Stylus-Data/bootstrap
+	url = https://KyleKing@github.com/maxmx/bootstrap-stylus
