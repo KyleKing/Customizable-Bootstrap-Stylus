@@ -1,6 +1,3 @@
 [submodule "tests/Extends/packages/Customizable-Bootstrap-Stylus"]
 	path = tests/Extends/packages/Customizable-Bootstrap-Stylus
 	url = https://KyleKing@github.com/KyleKing/Customizable-Bootstrap-Stylus
-[submodule "tests/Extends/packages/Customizable-Bootstrap-Stylus-Data"]
-	path = tests/Extends/packages/Customizable-Bootstrap-Stylus-Data
-	url = https://KyleKing@github.com/KyleKing/Customizable-Bootstrap-Stylus-Data
