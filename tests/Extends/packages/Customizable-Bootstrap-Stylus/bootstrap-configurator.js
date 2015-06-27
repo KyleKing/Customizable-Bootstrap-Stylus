@@ -133,13 +133,16 @@ var handler = function (compileStep, isLiterate) {
     "// If it throws errors your bootstrap.import.styl is probably invalid.",
     "// To fix that remove that file and then recover your changes.",
     '',
-    '@import "' + path.basename(importStylusFile) + '"',
+    '// @import "' + path.basename(importStylusFile) + '"',
     '$icon-font-path = "/packages/kyleking_customizable-bootstrap-stylus-data/bootstrap/fonts/"'
   ];
 
   // Find each component and push to file
   _.each(stylus, function (stylusPath) {
-    bootstrapContent.push(getStylusContent('' + stylusPath));
+    // if (stylusPath !== 'bootstrap/bootstrap/mixins.styl' && stylusPath !== 'bootstrap/utilities.styl') {
+      bootstrapContent.push(getStylusContent('' + stylusPath));
+      console.log(stylusPath);
+    // }
   });
   createStylusFile(outputStylusFile, bootstrapContent);
 };
