@@ -1,6 +1,4 @@
-// @import "lib/custom.bootstrap.mixins.import.styl"
 @import "lib/custom.bootstrap.import.styl"
-
 
 
 // Use Stylus demo as a sanity check
@@ -36,13 +34,9 @@ test-text()
   border 0
 
 .wrapper
+  test-text()
+  // Then import from bootstrap
 	text-hide()
-	// test-text()
-	// make-row()
-  // @extends .show-text()
-  // @extends .make-row
-
-
 
 
 // Then full blown test from the above import file
@@ -50,17 +44,19 @@ header
   .brand
     make-sm-column(4)
 
-.test
+.rowS
   make-row()
 
+// And whatever this came from
+.wrapper
+  make-row()
+.content-main
+  make-lg-column(8)
+.content-secondary
+  make-lg-column(3)
+  make-lg-column-offset(1)
 
 
+// Put your Stylus code here!
 
-// // Put your Stylus code here!
-// .wrapper
-//   @extend .make-row()
-// .content-main
-//   @extend .make-lg-column(8)
-// .content-secondary
-//   @extend .make-lg-column(3)
-//   @extend .make-lg-column-offset(1)
+// ...
