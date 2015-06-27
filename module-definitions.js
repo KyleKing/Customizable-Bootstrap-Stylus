@@ -1,9 +1,9 @@
 moduleDefinitions = {
-  "utilities":{stylus:["bootstrap/bootstrap/utilities.styl"]},
-  "responsive-utilities":{stylus:["bootstrap/bootstrap/responsive-utilities.styl"]},
-
   "variables":{stylus:["bootstrap/bootstrap/variables.styl"]},
   "mixins":{stylus:["bootstrap/bootstrap/mixins.styl"]},
+
+  "utilities":{stylus:["bootstrap/bootstrap/utilities.styl"]},
+  "responsive-utilities":{stylus:["bootstrap/bootstrap/responsive-utilities.styl"]},
 
   "normalize":{stylus:["bootstrap/bootstrap/normalize.styl"]},
   "print":{stylus:["bootstrap/bootstrap/print.styl"]},

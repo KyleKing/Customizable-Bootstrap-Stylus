@@ -108,7 +108,8 @@ var handler = function (compileStep, isLiterate) {
     "// These are the mixins bootstrap provides",
     "// They are included here so you can use them in your stylus files too,",
     "// However: you should @import \"" + path.basename(importStylusFile) + "\" instead of this",
-    getStylusContent('bootstrap/bootstrap/mixins.styl')
+    getStylusContent('bootstrap/bootstrap/mixins.styl'),
+    getStylusContent('bootstrap/bootstrap/utilities.styl')
   ]);
 
   // create the file that can be modified (variables)
@@ -139,7 +140,10 @@ var handler = function (compileStep, isLiterate) {
 
   // Find each component and push to file
   _.each(stylus, function (stylusPath) {
-    bootstrapContent.push(getStylusContent('' + stylusPath));
+    if (stylusPath !== 'bootstrap/bootstrap/mixins.styl' && stylusPath !== 'bootstrap/bootstrap/utilities.styl' && stylusPath !== 'bootstrap/bootstrap/variables.styl') {
+      bootstrapContent.push(getStylusContent('' + stylusPath));
+      // console.log(stylusPath);
+    }
   });
   createStylusFile(outputStylusFile, bootstrapContent);
 };

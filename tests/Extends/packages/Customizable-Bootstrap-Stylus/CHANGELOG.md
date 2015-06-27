@@ -1,5 +1,17 @@
+### V.next
+###### 30 June 2015
+
+- Improve documentation
+- test reduced functionality. Can this package really function when values are false in json file
+
+### 3.5.0
+###### 27 June 2015
+
+First real test files for mixin functionality. Removed duplicity from Custom.Bootstrap.styl and added utilities.styl to mixins file.
+Updated to most recent bootstrap stylus.
+
 ### v.Stylus
-- All previous work was done by @Nemo64 who has done a fantastic job of creating this package for LESS
+- All previous work was done by @Nemo64
 - I ported his work to support bootstrap-stylus as an alternative
 
 ### v.next
@@ -11,7 +23,7 @@
 ######11 April 2015
 
 Adjust source of the auto-generated `custom.bootstrap.json` file, which previously
-could cause errors due to the compnent load sequence diverging from the upstream
+could cause errors due to the component load sequence diverging from the upstream
 Bootstrap.
 
 - 1d60760 bump version
