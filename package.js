@@ -5,7 +5,7 @@ Package.describe({
   git: "https://github.com/KyleKing/customizable-bootstrap-stylus"
 });
 
-var DataPackage = 'kyleking:customizable-bootstrap-stylus-data';
+var DataPackage = 'kyleking:customizable-bootstrap-stylus-data@4.0.4';
 
 
 Package._transitional_registerBuildPlugin({
