@@ -16,6 +16,7 @@ Installation
 3. Start `meteor`
 4. Based on preference, change the true/false values to only the components you would like, (see [custom.bootstrap.json](#custombootstrapjson))
 4. (optional) Edit the global bootstrap variables inside `custom.bootstrap.import.styl` (this file is only generated once and won't be overwritten)
+5. (optional) Leverage the mixins [(see info below)](#mixins)
 
 
 Example `custom.bootstrap.json`
@@ -31,42 +32,10 @@ distributedConfiguration = [
       '"mixins": true,',
       '',
       '"normalize": true,',
-      '"print": true,',
-      '"glyphicons": true,',
-      '',
-      '"scaffolding": true,',
-      '"utilities": true,',
-      '"type": true,',
-      '"code": true,',
-      '"grid": true,',
-      '"tables": true,',
-      '"forms": true,',
-      '"buttons": true,',
-      '',
-      '"component-animations": true,',
-      '"dropdowns": true,',
-      '"button-groups": true,',
-      '"input-groups": true,',
-      '"navs": true,',
-      '"navbar": true,',
-      '"breadcrumbs": true,',
-      '"pagination": true,',
-      '"pager": true,',
-      '"labels": true,',
-      '"badges": true,',
-      '"jumbotron": true,',
-      '"thumbnails": true,',
-      '"alerts": true,',
-      '"progress-bars": true,',
-      '"media": true,',
-      '"list-group": true,',
-      '"panels": true,',
-      '"responsive-embed": true,',
-      '"wells": true,',
-      '"close": true,',
-      '',
-      '"modals": true,',
-      '"tooltip": true,',
+      
+      '....etc!',
+      
+      
       '"popovers": true,',
       '"carousel": true,',
       '',
@@ -75,6 +44,21 @@ distributedConfiguration = [
   '}'
 ].join('\n');
 ```
+
+Customizing
+====
+> The real benefit of injecting bootstrap like this is the access to Bootstrap's powerful mixins and other variables
+
+### Mixins
+You can import bootstrap mixins in your stylus file using `@import "custom.bootstrap.import.styl"`
+Then insert any stylus code. Such as:
+
+```stylus
+`@import "lib/custom.bootstrap.import.styl"`
+
+
+
+
 
 Misc
 ====
@@ -92,7 +76,7 @@ This package is licensed with the MIT license and the [Bootstrap license](https:
 Origin
 ------
 
-This package is a port of the [meteor-bootstrap](https://github.com/Nemo64/meteor-bootstrap) package from LESS to stylus. Both of @Nemo64's packages are included as I used them in developing.
+This package is a port of the [meteor-bootstrap](https://github.com/Nemo64/meteor-bootstrap) package from LESS to stylus.
 
 About Me
 --------
