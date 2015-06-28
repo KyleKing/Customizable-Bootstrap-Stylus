@@ -1,7 +1,7 @@
 Package.describe({
   name: "kyleking:customizable-bootstrap-stylus-data",
   summary: "Raw bootstrap-stylus package",
-  version: "4.0.5",
+  version: "4.0.4",
   git: "https://github.com/kyleking/customizable-bootstrap-stylus-data.git"
 });
 
@@ -50,7 +50,6 @@ Package.onUse(function(api) {
     'bootstrap/bootstrap/mixins/panels.styl',
     'bootstrap/bootstrap/mixins/progress-bar.styl',
     'bootstrap/bootstrap/mixins/reset-filter.styl',
-    'bootstrap/bootstrap/mixins/reset-text.styl',
     'bootstrap/bootstrap/mixins/resize.styl',
     'bootstrap/bootstrap/mixins/responsive-visibility.styl',
     'bootstrap/bootstrap/mixins/size.styl',
