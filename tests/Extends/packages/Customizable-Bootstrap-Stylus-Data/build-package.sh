@@ -13,8 +13,8 @@ set -u
 set -o pipefail
 
 # Establish Variables
-BOOTSTRAP_TAG="4.0.4"
-PUBLISH_VERSION="4.0.4"
+BOOTSTRAP_TAG="4.0.5"
+PUBLISH_VERSION="4.0.5"
 
 BOOTSTRAP_DIR="bootstrap"
 BOOTSTRAP_STYLUS_DIR="$BOOTSTRAP_DIR/bootstrap"
