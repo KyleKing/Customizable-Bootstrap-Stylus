@@ -1,6 +1,6 @@
 Customizable Bootstrap Stylus for Meteor
 ========================================
-> The easiest way to integrate Bootstrap Stylus into a Meteor project
+> The easiest way to integrate Bootstrap Stylus 3.3.4 into a Meteor project
 
 Installation
 ------------
