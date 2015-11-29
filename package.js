@@ -1,11 +1,11 @@
 Package.describe({
   name: 'kyleking:customizable-bootstrap-stylus',
   summary: "Highly configurable bootstrap-stylus integration.",
-  version: "3.5.0_1",
+  version: "3.3.6",
   git: "https://github.com/KyleKing/customizable-bootstrap-stylus"
 });
 
-var DataPackage = 'kyleking:customizable-bootstrap-stylus-data@4.0.4';
+var DataPackage = 'kyleking:customizable-bootstrap-stylus-data@4.0.6';
 
 
 Package._transitional_registerBuildPlugin({
