@@ -2,6 +2,8 @@ Customizable Bootstrap Stylus for Meteor
 ========================================
 > The easiest way to integrate Bootstrap Stylus 3.3.4 into a Meteor project
 
+[![Meteor Icon](http://icon.meteor.com/package/kyleking:customizable-bootstrap-stylus)][atmosphere]
+
 Installation
 ------------
 
@@ -25,10 +27,10 @@ Then insert any stylus code. Such as:
 // Put your Stylus code here!
 .wrapper
   make-row()
-  
+
 .content-main
   make-lg-column(8)
-  
+
 .content-secondary
   make-lg-column(3)
   make-lg-column-offset(1)
@@ -122,13 +124,10 @@ About Me
 
 Thanks for scrolling this far, if you want to get in touch:
 
- * [My website](http://kyleking.github.io) (kyleking.github.io)
+ * [My website](http://kyleking.me) (kyleking.me)
  * [Twitter](http://twitter.com/Kyle4Miles) (@Kyle4Miles)
 
 <!-- Links stored as variables -->
 
 [issue]: https://github.com/KyleKing/Customizable-Bootstrap-Stylus/issues
-
-
-
-
+[atmosphere]: https://atmospherejs.com/kyleking/customizable-bootstrap-stylus
