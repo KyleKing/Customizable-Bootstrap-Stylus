@@ -1,8 +1,12 @@
+#*Meteor Compatibility* 
+
+`Customizable Bootstrap Stylus` does not work with Meteor 1.2+. I'm busy figuring out how to fix this package, but it may not be usable with Meteor 1.2+ until late October. If you want to contribute, all of my current work is on the meteor14 branch.
+
 Customizable Bootstrap Stylus for Meteor
 ========================================
 > The easiest way to integrate Bootstrap Stylus 3.3.4 into a Meteor project
 
-[![Meteor Icon](http://icon.meteor.com/package/kyleking:customizable-bootstrap-stylus)][atmosphere]
+<!-- [![Meteor Icon](http://icon.meteor.com/package/kyleking:customizable-bootstrap-stylus)][atmosphere] -->
 
 Installation
 ------------
