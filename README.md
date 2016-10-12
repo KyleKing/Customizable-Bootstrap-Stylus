@@ -1,4 +1,4 @@
-#*Meteor Compatibility* 
+#*Meteor Compatibility*
 
 `Customizable Bootstrap Stylus` does not work with Meteor 1.2+. I'm busy figuring out how to fix this package, but it may not be usable with Meteor 1.2+ until late October. If you want to contribute, all of my current work is on the meteor14 branch.
 
@@ -11,7 +11,7 @@ Customizable Bootstrap Stylus for Meteor
 Installation
 ------------
 
-1. Execute `meteor add kyleking:Customizable-Bootstrap-Stylus`
+1. Execute `meteor add kyleking:customizable-bootstrap-stylus`
 2. Create an empty `custom.bootstrap.json` file somewhere in your project. (for example: `/client/style/lib/custom.bootstrap.json`)
 3. Start `meteor`
 4. The `custom.bootstrap.json` file will be populated with all true values and three additional files will be written in the same folder. Based on preference, change the true/false values to only the components you would like, (see [custom.bootstrap.json](#custombootstrapjson))
