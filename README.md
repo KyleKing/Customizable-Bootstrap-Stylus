@@ -1,6 +1,8 @@
 #*Meteor Compatibility*
 
-`Customizable Bootstrap Stylus` does not work with Meteor 1.2+. I'm busy figuring out how to fix this package, but it may not be usable with Meteor 1.2+ until late October. If you want to contribute, all of my current work is on the meteor14 branch.
+Regrettably `Customizable Bootstrap Stylus` does not work with Meteor 1.2+
+
+# For Meteor < 1.2
 
 Customizable Bootstrap Stylus for Meteor
 ========================================
